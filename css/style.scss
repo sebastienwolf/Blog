@@ -1,0 +1,493 @@
+$color1: #F8F9F7;
+$color2: #84947B; //vert olive
+$color3: #E1E9E1;
+$color4: #2F2E2E;
+$color5: #aeb8ae;
+$color6: #d3e0d3;
+$color7: #8b8585;
+$color8: #b2996b;
+$color9: #ffffff;
+$color10: #dddddd;
+
+@font-face {
+    font-family: 'futura';
+    src: url('../police/Futura-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'didot';
+    src: url('../police/DIdot/DidotHTFL06LightItal.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../police/Metropolis-Light/Metropolis-Light.otf')format('opentype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../police/Roboto/Roboto-Light.ttf')format('truetype');
+}
+
+// ===========================================================================
+* {
+    font-family: "futura";
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px $color2;
+    font-family: "futura";
+
+    nav {
+        background: $color1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 100%;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+
+
+
+
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: $color4;
+
+                }
+            }
+        }
+    }
+
+    div {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 25%;
+            height: 150px;
+
+        }
+
+        h1 {
+            color: $color2;
+        }
+    }
+}
+
+// ===========================================================================
+main {
+    margin-top: 70px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 70px;
+    font-family: "futura";
+    text-align: justify;
+
+    .apropos {
+        display: flex;
+
+
+        img {
+
+            height: 400px;
+            width: 400px;
+            margin-right: 100px;
+            background-size: cover;
+        }
+
+        section {
+            font-family: "futura";
+
+            h2 {
+                margin-bottom: 10px;
+            }
+
+            div {
+                width: 50px;
+                border-bottom: 1px solid black;
+                margin-bottom: 10px;
+                color: white;
+
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+
+    // =================================================================
+    // accueil
+    .textPresentation {
+        h2 {
+            color: $color2;
+        }
+    }
+
+    // =================================================================
+    // aside
+    .index {
+        display: flex;
+
+
+        aside {
+            width: 25%;
+
+            p {
+                border-bottom: 1px solid $color4;
+            }
+
+            .etoile {
+                border: none;
+                border-top: 3px solid $color8;
+                color: $color8;
+                overflow: visible;
+                text-align: center;
+                height: 5px;
+            }
+
+
+            .etoile:after {
+                background: #fff;
+                content: "\2605";
+                padding: 0 4px;
+                position: relative;
+                top: -13px;
+            }
+
+            ul {
+
+                display: flex;
+
+                justify-content: space-between;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        text-decoration: none;
+                        color: $color4;
+
+                        svg {
+                            height: 25px;
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+
+            h4 {
+                font-size: 20px;
+                font-family: "didot";
+                text-align: center;
+            }
+
+            div {
+                h5 {
+                    font-family: "didot";
+                }
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                }
+
+                p {
+                    border: none;
+                }
+
+                button {
+                    width: 100%;
+                    height: 30px;
+                    background: $color2;
+                    color: $color1;
+                    border: hidden;
+
+                }
+
+            }
+        }
+
+        article {
+            width: 75%;
+            margin-left: 20px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            font-family: "futura";
+            border: 1px solid $color3;
+
+            img {
+                width: 100%;
+                height: 350px;
+
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                color: $color2;
+                margin-left: 2px;
+                margin-right: 2px;
+
+
+                svg {
+                    margin-right: 2px;
+                }
+
+
+
+            }
+
+            .text {
+
+                border-bottom: 1px solid $color2;
+                margin-left: 2px;
+                margin-right: 2px;
+
+
+
+                p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: $color4;
+                }
+
+                button {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 30px;
+                    background: $color2;
+                    color: $color1;
+                    border: hidden;
+                    margin-bottom: 10px;
+
+                }
+            }
+
+            .commentaire {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                height: 80px;
+
+                a {
+                    text-decoration: none;
+                    color: $color4;
+
+                }
+            }
+        }
+
+
+    }
+
+    // =================================================================
+    // cards recette
+    .cardsDetaille {
+        .cards {
+            border: 1px solid $color3;
+            display: flex;
+            flex-direction: column;
+            font-family: "futura";
+            padding-left: 10%;
+            padding-right: 10%;
+
+
+            img {
+                margin-top: 20px;
+                width: 100%;
+                height: 350px;
+
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                color: $color2;
+
+                svg {
+                    margin-right: 2px;
+                }
+
+
+
+            }
+
+            .text {
+
+                border-bottom: 1px solid $color2;
+
+
+                p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: $color4;
+                }
+
+                button {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 30px;
+                    background: $color2;
+                    color: $color1;
+                    border: hidden;
+                    margin-bottom: 10px;
+
+                }
+            }
+
+            .commentaire {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                height: 80px;
+
+                a {
+                    text-decoration: none;
+                    color: $color4;
+
+                }
+            }
+        }
+
+        // ===================
+        .recetteCom {
+            font-family: "futura";
+            width: 100%;
+        }
+
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+
+            input {
+                width: 100%;
+            }
+
+            textarea {
+                width: 100%;
+                resize: none;
+            }
+
+            button {
+                background: $color2;
+                color: $color3;
+                width: 200px;
+                border: none;
+            }
+        }
+
+
+        .recetteNew {
+            div {
+                display: flex;
+                justify-content: space-between;
+
+                .miniCards {
+                    margin-top: 50px;
+                    padding-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border: 1px solid $color3;
+                    width: 30%;
+                    gap: 5%;
+
+
+                    img {
+                        width: 100%;
+                        height: 300px;
+
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom: 1px solid $color3;
+                        padding: 5px;
+
+                        h5 {
+                            color: $color4;
+                        }
+
+                        a {
+                            color: $color4;
+                            text-decoration: none;
+
+                            button {
+                                width: 100%;
+                                background: $color2;
+                                border: none;
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+// ===========================================================================
+// footer
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: $color1;
+    height: 50px;
+    align-items: center;
+    font-family: "Roboto";
+
+    nav {
+        ul {
+            display: flex;
+
+            li {
+                list-style-type: none;
+                margin-left: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: $color4;
+
+
+                    svg {
+                        height: 20px;
+                        width: 20px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,492 @@
+@font-face {
+  font-family: 'futura';
+  src: url("../police/Futura-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'didot';
+  src: url("../police/DIdot/DidotHTFL06LightItal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'metropolis';
+  src: url("../police/Metropolis-Light/Metropolis-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../police/Roboto/Roboto-Light.ttf") format("truetype");
+}
+
+* {
+  font-family: "futura";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: solid 1px #84947B;
+  font-family: "futura";
+}
+
+header nav {
+  background: #F8F9F7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #2F2E2E;
+}
+
+header div {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div img {
+  width: 25%;
+  height: 150px;
+}
+
+header div h1 {
+  color: #84947B;
+}
+
+main {
+  margin-top: 70px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 70px;
+  font-family: "futura";
+  text-align: justify;
+}
+
+main .apropos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .apropos img {
+  height: 400px;
+  width: 400px;
+  margin-right: 100px;
+  background-size: cover;
+}
+
+main .apropos section {
+  font-family: "futura";
+}
+
+main .apropos section h2 {
+  margin-bottom: 10px;
+}
+
+main .apropos section div {
+  width: 50px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  color: white;
+}
+
+main .apropos section p {
+  text-align: justify;
+}
+
+main .textPresentation h2 {
+  color: #84947B;
+}
+
+main .index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .index aside {
+  width: 25%;
+}
+
+main .index aside p {
+  border-bottom: 1px solid #2F2E2E;
+}
+
+main .index aside .etoile {
+  border: none;
+  border-top: 3px solid #b2996b;
+  color: #b2996b;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+main .index aside .etoile:after {
+  background: #fff;
+  content: "\2605";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+
+main .index aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .index aside ul li {
+  list-style-type: none;
+}
+
+main .index aside ul li a {
+  text-decoration: none;
+  color: #2F2E2E;
+}
+
+main .index aside ul li a svg {
+  height: 25px;
+  width: 20px;
+}
+
+main .index aside h4 {
+  font-size: 20px;
+  font-family: "didot";
+  text-align: center;
+}
+
+main .index aside div h5 {
+  font-family: "didot";
+}
+
+main .index aside div img {
+  width: 100%;
+  height: 150px;
+}
+
+main .index aside div p {
+  border: none;
+}
+
+main .index aside div button {
+  width: 100%;
+  height: 30px;
+  background: #84947B;
+  color: #F8F9F7;
+  border: hidden;
+}
+
+main .index article {
+  width: 75%;
+  margin-left: 20px;
+}
+
+main .index section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "futura";
+  border: 1px solid #E1E9E1;
+}
+
+main .index section img {
+  width: 100%;
+  height: 350px;
+}
+
+main .index section p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #84947B;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+main .index section p svg {
+  margin-right: 2px;
+}
+
+main .index section .text {
+  border-bottom: 1px solid #84947B;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+main .index section .text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #2F2E2E;
+}
+
+main .index section .text button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  background: #84947B;
+  color: #F8F9F7;
+  border: hidden;
+  margin-bottom: 10px;
+}
+
+main .index section .commentaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+main .index section .commentaire a {
+  text-decoration: none;
+  color: #2F2E2E;
+}
+
+main .cardsDetaille .cards {
+  border: 1px solid #E1E9E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "futura";
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+main .cardsDetaille .cards img {
+  margin-top: 20px;
+  width: 100%;
+  height: 350px;
+}
+
+main .cardsDetaille .cards p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #84947B;
+}
+
+main .cardsDetaille .cards p svg {
+  margin-right: 2px;
+}
+
+main .cardsDetaille .cards .text {
+  border-bottom: 1px solid #84947B;
+}
+
+main .cardsDetaille .cards .text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #2F2E2E;
+}
+
+main .cardsDetaille .cards .text button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  background: #84947B;
+  color: #F8F9F7;
+  border: hidden;
+  margin-bottom: 10px;
+}
+
+main .cardsDetaille .cards .commentaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+}
+
+main .cardsDetaille .cards .commentaire a {
+  text-decoration: none;
+  color: #2F2E2E;
+}
+
+main .cardsDetaille .recetteCom {
+  font-family: "futura";
+  width: 100%;
+}
+
+main .cardsDetaille form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+main .cardsDetaille form input {
+  width: 100%;
+}
+
+main .cardsDetaille form textarea {
+  width: 100%;
+  resize: none;
+}
+
+main .cardsDetaille form button {
+  background: #84947B;
+  color: #E1E9E1;
+  width: 200px;
+  border: none;
+}
+
+main .cardsDetaille .recetteNew div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .cardsDetaille .recetteNew div .miniCards {
+  margin-top: 50px;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #E1E9E1;
+  width: 30%;
+  gap: 5%;
+}
+
+main .cardsDetaille .recetteNew div .miniCards img {
+  width: 100%;
+  height: 300px;
+}
+
+main .cardsDetaille .recetteNew div .miniCards div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid #E1E9E1;
+  padding: 5px;
+}
+
+main .cardsDetaille .recetteNew div .miniCards div h5 {
+  color: #2F2E2E;
+}
+
+main .cardsDetaille .recetteNew div .miniCards div a {
+  color: #2F2E2E;
+  text-decoration: none;
+}
+
+main .cardsDetaille .recetteNew div .miniCards div a button {
+  width: 100%;
+  background: #84947B;
+  border: none;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #F8F9F7;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto";
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer nav ul li {
+  list-style-type: none;
+  margin-left: 10px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #2F2E2E;
+}
+
+footer nav ul li a svg {
+  height: 20px;
+  width: 20px;
+}
+/*# sourceMappingURL=style.css.map */
