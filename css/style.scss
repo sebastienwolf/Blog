@@ -133,8 +133,13 @@ main {
     // =================================================================
     // accueil
     .textPresentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         h2 {
             color: $color2;
+
         }
     }
 
@@ -289,6 +294,8 @@ main {
                 height: 80px;
 
                 a {
+                    margin-left: 2px;
+                    margin-right: 2px;
                     text-decoration: none;
                     color: $color4;
 
@@ -451,8 +458,108 @@ main {
             }
         }
     }
-}
 
+    // ================================================================
+    // contact
+    .contact {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "futura";
+        color: $color2;
+        width: 300px;
+        gap: 20px;
+
+        button {
+            background: $color2;
+            color: $color1;
+            width: 80px;
+            height: 40px;
+            border: none;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: $color3;
+
+        }
+
+        form {
+            button {
+                float: right;
+                background: $color2;
+                color: $color3;
+                width: 60px;
+                height: 40px;
+                border: none;
+                margin-top: 10px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                input {
+                    width: 300px;
+                }
+
+                .label-file {
+                    margin-top: 20px;
+                    cursor: pointer;
+                    color: $color2;
+                    font-weight: bold;
+                }
+
+                .label-file:hover {
+                    color: $color4;
+                }
+
+                // et on masque le input
+                .input-file {
+                    display: none;
+                }
+
+
+                select {
+                    width: 300px;
+
+                }
+
+                button {
+                    background: $color2;
+                    color: $color1;
+                    width: 80px;
+                    height: 40px;
+                    border: none;
+
+                }
+
+                .creer {
+
+                    background: $color2;
+                    color: $color1;
+                    width: 80px;
+                    height: 40px;
+                    border: none;
+
+
+                }
+
+                textarea {
+                    width: 300px;
+                    resize: none;
+                }
+
+            }
+
+        }
+    }
+}
 
 
 

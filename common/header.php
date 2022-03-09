@@ -1,4 +1,5 @@
 <?php
+session_start();
 $b = $_SERVER['HTTP_HOST'];
 $a = basename($_SERVER['PHP_SELF']);
 $c = rtrim($a, ".php")
@@ -24,11 +25,24 @@ $c = rtrim($a, ".php")
     <header>
         <nav>
             <ul>
-                <li><a href="http://<?= $b ?>/index.php">ACCUEIL</a></li>
-                <li><a href="http://<?= $b ?>/page/recettes.php">RECETTES</a></li>
-                <li><a href="http://<?= $b ?>/page/aPropos.php">A PROPOS</a></li>
-                <li><a href="http://<?= $b ?>/page/contact.php">CONTACT</a></li>
-                <li><a href="http://<?= $b ?>/page/connexion.php">CONNEXION</a></li>
+                <li><a href="http://<?= $b ?>/index.php?page=accueil">ACCUEIL</a></li>
+                <li><a href="http://<?= $b ?>/index.php?page=recette">RECETTES</a></li>
+                <li><a href="http://<?= $b ?>/index.php?page=aPropos">A PROPOS</a></li>
+                <li><a href="http://<?= $b ?>/index.php?page=contact">CONTACT</a></li>
+                <?php if (isset($_SESSION['userType'])) {
+                    $type = $_SESSION['userType'];
+
+                    if ($type == "admin") { ?>
+                        <li><a href="./function/logOut.php">DECONNEXION</a></li>
+                    <?php
+                    }
+                    if ($type == "utilisateur") { ?>
+                        <li><a href="./function/logOut.php">DECONNEXION</a></li>
+                    <?php
+                    }
+                } else { ?>
+                    <li><a href="http://<?= $b ?>/index.php?page=connexionUser">CONNEXION</a></li>
+                <?php } ?>
             </ul>
         </nav>
         <div>

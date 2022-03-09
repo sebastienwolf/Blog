@@ -1,6 +1,6 @@
 <?php
-include '../common/connexion.php';
-include_once '../common/header.php';
+include './common/connexion.php';
+include_once './common/header.php';
 ?>
 
 <article class="apropos">
@@ -17,5 +17,5 @@ include_once '../common/header.php';
 </article>
 
 <?php
-include_once '../common/footer.php'
+include_once './common/footer.php'
 ?>

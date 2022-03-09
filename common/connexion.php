@@ -1,6 +1,6 @@
 
 <?php
-
+session_start();
 // DEFINITION DES VARIABLES POUR LA CONNEXION A LA DATABASE
 
 $servername = "localhost";

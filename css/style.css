@@ -126,6 +126,19 @@ main .apropos section p {
   text-align: justify;
 }
 
+main .textPresentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 main .textPresentation h2 {
   color: #84947B;
 }
@@ -285,6 +298,8 @@ main .index section .commentaire {
 }
 
 main .index section .commentaire a {
+  margin-left: 2px;
+  margin-right: 2px;
   text-decoration: none;
   color: #2F2E2E;
 }
@@ -453,6 +468,103 @@ main .cardsDetaille .recetteNew div .miniCards div a button {
   width: 100%;
   background: #84947B;
   border: none;
+}
+
+main .contact {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "futura";
+  color: #84947B;
+  width: 300px;
+  gap: 20px;
+}
+
+main .contact button {
+  background: #84947B;
+  color: #F8F9F7;
+  width: 80px;
+  height: 40px;
+  border: none;
+}
+
+main .contact a {
+  text-decoration: none;
+  color: #E1E9E1;
+}
+
+main .contact form button {
+  float: right;
+  background: #84947B;
+  color: #E1E9E1;
+  width: 60px;
+  height: 40px;
+  border: none;
+  margin-top: 10px;
+}
+
+main .contact form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+main .contact form div input {
+  width: 300px;
+}
+
+main .contact form div .label-file {
+  margin-top: 20px;
+  cursor: pointer;
+  color: #84947B;
+  font-weight: bold;
+}
+
+main .contact form div .label-file:hover {
+  color: #2F2E2E;
+}
+
+main .contact form div .input-file {
+  display: none;
+}
+
+main .contact form div select {
+  width: 300px;
+}
+
+main .contact form div button {
+  background: #84947B;
+  color: #F8F9F7;
+  width: 80px;
+  height: 40px;
+  border: none;
+}
+
+main .contact form div .creer {
+  background: #84947B;
+  color: #F8F9F7;
+  width: 80px;
+  height: 40px;
+  border: none;
+}
+
+main .contact form div textarea {
+  width: 300px;
+  resize: none;
 }
 
 footer {
