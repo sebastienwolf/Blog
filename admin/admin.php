@@ -1,13 +1,14 @@
 <?php
 include './common/connexion.php';
 include_once './common/header.php';
+include_once './function/requete.php';
 ?>
 
 <article class="admintableau">
     <h2>Administration</h2>
     <div>
         <a href="http://<?= $b ?>/index.php?page=adminAddArticle"><button>Ajouter un article</button></a>
-        <a href="http://<?= $b ?>/index.php?page=adminContact"><button> Contact</button></a>
+        <a href="http://<?= $b ?>/index.php?page=adminMessage"><button> Contact</button></a>
         <a href="http://<?= $b ?>/index.php?page=adminUser"><button>Modifier un utilisateur</button></a>
 
     </div>
@@ -27,16 +28,15 @@ include_once './common/header.php';
                 $i = $row->article ?>
                 <tr>
                     <!-- ON UTILISE LE TAG PHP ET ECHO DANS LES CASES DU TABLEAU POUR LES REMPLIR AVEC LES DONNÉES -->
-                    <form action="http://<?= $b ?>/index.php?page=adminModifArticle" method="post">
+                    <form action="http://<?= $b ?>/index.php?page=adminModifArticle&id=<?= $row->idArticle ?>" method="post">
                         <td><?php echo $row->idArticle; ?></td>
                         <td><?php echo $row->titre; ?></td>
                         <td><?php echo $row->categorie; ?></td>
                         <td>
-                            <input type="text" hidden name="idea" value="<?php echo $i ?>">
-                            <button type="submit" class="btn btn-success" name="edit">Modifier</button>
+                            <button name="edit">Modifier</button>
                     </form>
-                    <form action="http://<?= $b ?>/index.php?page=adminDeleteArt" method="post">
-                        <button type="submit" class="btn btn-danger" name="delete">Supprimer</button>
+                    <form action="http://<?= $b ?>/index.php?page=adminDeleteArt&id=<?= $row->idArticle ?>" method="post">
+                        <button name="delete">Supprimer</button>
                     </form>
                     </td>
                 </tr>

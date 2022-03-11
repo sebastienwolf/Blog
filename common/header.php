@@ -53,6 +53,3 @@ $c = rtrim($a, ".php");
         </div>
     </header>
     <main>
-        <?php
-
-        ?>

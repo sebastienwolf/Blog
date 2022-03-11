@@ -32,8 +32,8 @@ if ($filter) {
         case "adminAddArticle":
             adminAddArticle();
             break;
-        case "adminContact":
-            adminContact();
+        case "adminMessage":
+            adminMessage();
             break;
         case "adminModifArticle":
             adminModifArticle();

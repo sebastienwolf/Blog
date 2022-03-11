@@ -46,10 +46,10 @@ function adminAddArticle()
         accueil();
     }
 }
-function adminContact()
+function adminMessage()
 {
     if ($_SESSION['userType'] == "admin") {
-        require_once './admin/adminContact.php';
+        require_once './admin/adminMessage.php';
     } else {
         accueil();
     }

@@ -490,8 +490,35 @@ main {
     }
 
     // =================================================================
-    // cards full recette
+    // admin tableau
+    .admintableau {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
 
+        section {
+            table {
+                border: 1px solid black;
+                width: 100%;
+
+                thead {
+                    border: 1px solid black;
+
+
+                }
+
+                td {
+                    border: 1px solid $color7;
+                }
+
+                .spaceBtton {
+                    display: flex;
+                }
+
+
+            }
+        }
+    }
 
     // ================================================================
     // contact

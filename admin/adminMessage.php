@@ -21,7 +21,7 @@ include_once './function/requete.php';
                 </tr>
             </thead>
             <?php
-            $stmt = contact($pdo);
+            $stmt = reception($pdo);
             while ($row = $stmt->fetch()) {
                 $i = $row->message ?>
                 <tr>

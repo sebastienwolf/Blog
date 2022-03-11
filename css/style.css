@@ -510,6 +510,36 @@ main .cardsDetaille .recetteNew div .miniCards div a button {
   border: none;
 }
 
+main .admintableau {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+main .admintableau section table {
+  border: 1px solid black;
+  width: 100%;
+}
+
+main .admintableau section table thead {
+  border: 1px solid black;
+}
+
+main .admintableau section table td {
+  border: 1px solid #8b8585;
+}
+
+main .admintableau section table .spaceBtton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main .contact {
   margin-left: auto;
   margin-right: auto;
