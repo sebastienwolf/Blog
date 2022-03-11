@@ -2,7 +2,7 @@
 session_start();
 $b = $_SERVER['HTTP_HOST'];
 $a = basename($_SERVER['PHP_SELF']);
-$c = rtrim($a, ".php")
+$c = rtrim($a, ".php");
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +33,7 @@ $c = rtrim($a, ".php")
                     $type = $_SESSION['userType'];
 
                     if ($type == "admin") { ?>
+                        <li><a href="http://<?= $b ?>/index.php?page=tableauDeBord">ADMIN</a></li>
                         <li><a href="./function/logOut.php">DECONNEXION</a></li>
                     <?php
                     }
@@ -52,3 +53,6 @@ $c = rtrim($a, ".php")
         </div>
     </header>
     <main>
+        <?php
+
+        ?>

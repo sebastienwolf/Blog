@@ -26,6 +26,24 @@ if ($filter) {
         case "inscriptionUser":
             inscriptionUser();
             break;
+        case "tableauDeBord":
+            tableauDeBord();
+            break;
+        case "adminAddArticle":
+            adminAddArticle();
+            break;
+        case "adminContact":
+            adminContact();
+            break;
+        case "adminModifArticle":
+            adminModifArticle();
+            break;
+        case "adminUser":
+            adminUser();
+            break;
+        case "adminDeleteArt":
+            adminDeleteArt();
+            break;
     }
 } else {
     accueil();

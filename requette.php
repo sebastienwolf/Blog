@@ -1,5 +1,5 @@
 <?php
-echo "<p>test</p>";
+
 function popArticle($pdo, $where)
 {
     // $i = filter_input(INPUT_GET, "id");
@@ -44,23 +44,23 @@ function popCom($pdo, $idarticle)
 }
 
 
-// function user($pdo)
-// {
-//     // $i = filter_input(INPUT_GET, "id");
-//     // include './common/connexion.php';
-//     $stmt = $pdo->prepare("SELECT * FROM users WHERE 1");
+function user($pdo)
+{
+    // $i = filter_input(INPUT_GET, "id");
+    // include './common/connexion.php';
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE 1");
 
-//     $stmt->execute();
+    $stmt->execute();
 
-//     return $stmt;
-// }
-// function contact($pdo)
-// {
-//     // $i = filter_input(INPUT_GET, "id");
-//     // include './common/connexion.php';
-//     $stmt = $pdo->prepare("SELECT * FROM message WHERE 1");
+    return $stmt;
+}
+function contact($pdo)
+{
+    // $i = filter_input(INPUT_GET, "id");
+    // include './common/connexion.php';
+    $stmt = $pdo->prepare("SELECT * FROM message WHERE 1");
 
-//     $stmt->execute();
+    $stmt->execute();
 
-//     return $stmt;
-// }
+    return $stmt;
+}

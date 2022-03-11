@@ -147,6 +147,7 @@ main .index {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
 }
 
 main .index aside {
@@ -214,6 +215,9 @@ main .index aside div img {
 
 main .index aside div p {
   border: none;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 main .index aside div button {
@@ -227,6 +231,14 @@ main .index aside div button {
 main .index article {
   width: 75%;
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 
 main .index section {
@@ -304,6 +316,17 @@ main .index section .commentaire a {
   color: #2F2E2E;
 }
 
+main .cardsDetaille {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
 main .cardsDetaille .cards {
   border: 1px solid #E1E9E1;
   display: -webkit-box;
@@ -365,14 +388,31 @@ main .cardsDetaille .cards .commentaire {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 80px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 main .cardsDetaille .cards .commentaire a {
   text-decoration: none;
+  color: #2F2E2E;
+}
+
+main .cardsDetaille .cards .commentaire .affichageCom {
+  display: block;
+  border: 1px solid #2F2E2E;
+  margin-bottom: 5px;
+}
+
+main .cardsDetaille .cards .commentaire .affichageCom p {
+  color: #84947B;
+}
+
+main .cardsDetaille .cards .commentaire .affichageCom p .coment {
   color: #2F2E2E;
 }
 
@@ -381,7 +421,7 @@ main .cardsDetaille .recetteCom {
   width: 100%;
 }
 
-main .cardsDetaille form {
+main .cardsDetaille .recetteCom form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,16 +435,16 @@ main .cardsDetaille form {
   gap: 5px;
 }
 
-main .cardsDetaille form input {
+main .cardsDetaille .recetteCom form input {
   width: 100%;
 }
 
-main .cardsDetaille form textarea {
+main .cardsDetaille .recetteCom form textarea {
   width: 100%;
   resize: none;
 }
 
-main .cardsDetaille form button {
+main .cardsDetaille .recetteCom form button {
   background: #84947B;
   color: #E1E9E1;
   width: 200px;

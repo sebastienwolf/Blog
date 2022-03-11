@@ -11,7 +11,7 @@ include_once './common/header.php';
         <div>
 
             <input type="email" placeholder="E-mail" name="mail" id="">
-            <input type="text" placeholder="Mot de passe" name="password" id="">
+            <input type="password" placeholder="Mot de passe" name="password" id="">
         </div>
         <button name="connexion">Connexion</button>
 
