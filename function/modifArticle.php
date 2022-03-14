@@ -1,5 +1,9 @@
 <?php
 include_once '../common/connexion.php';
+include_once '../common/header.php';
+include '../function/function.php';
+
+
 
 
 if (filter_input(INPUT_POST, "titre")) {
@@ -44,4 +48,13 @@ if (filter_input(INPUT_POST, "menu")) {
     $pdo->query($stmtCat);
 }
 
-header("Location: http://<?= $b ?>/index.php?page=tableauDeBord");
+if (isset($_POST['delete'])) {
+    $id = filter_input(INPUT_POST, "idDelete");
+
+
+    $stmtdelete = "DELETE FROM article WHERE idArticle= $id";
+    $pdo->query($stmtdelete);
+}
+
+
+header("Location: http://$b/index.php?page=tableauDeBord");

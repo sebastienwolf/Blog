@@ -518,6 +518,33 @@ main .admintableau {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+main .admintableau div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .admintableau div a button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  background: #84947B;
+  color: #F8F9F7;
+  border: hidden;
+  margin-bottom: 10px;
+}
+
+main .admintableau section {
   width: 100%;
 }
 
@@ -538,6 +565,38 @@ main .admintableau section table .spaceBtton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main .admintableau section table tr div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+main .admintableau section table tr form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  gap: 5px;
+}
+
+main .admintableau section table tr form button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  background: #8b8585;
+  color: #2F2E2E;
+  border: hidden;
+  margin-bottom: 10px;
+}
+
+main .admintableau section table tr form .delete {
+  background: #b2996b;
 }
 
 main .contact {

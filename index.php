@@ -44,6 +44,9 @@ if ($filter) {
         case "adminDeleteArt":
             adminDeleteArt();
             break;
+        case "adminModifUser":
+            adminModifUser();
+            break;
     }
 } else {
     accueil();

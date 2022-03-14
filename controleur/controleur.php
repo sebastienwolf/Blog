@@ -78,3 +78,12 @@ function adminDeleteArt()
         accueil();
     }
 }
+
+function adminModifUser()
+{
+    if ($_SESSION['userType'] == "admin") {
+        require_once './admin/adminModifUser.php';
+    } else {
+        accueil();
+    }
+}

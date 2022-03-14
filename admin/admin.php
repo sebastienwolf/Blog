@@ -28,16 +28,19 @@ include_once './function/requete.php';
                 $i = $row->article ?>
                 <tr>
                     <!-- ON UTILISE LE TAG PHP ET ECHO DANS LES CASES DU TABLEAU POUR LES REMPLIR AVEC LES DONNÉES -->
-                    <form action="http://<?= $b ?>/index.php?page=adminModifArticle&id=<?= $row->idArticle ?>" method="post">
-                        <td><?php echo $row->idArticle; ?></td>
-                        <td><?php echo $row->titre; ?></td>
-                        <td><?php echo $row->categorie; ?></td>
-                        <td>
-                            <button name="edit">Modifier</button>
-                    </form>
-                    <form action="http://<?= $b ?>/index.php?page=adminDeleteArt&id=<?= $row->idArticle ?>" method="post">
-                        <button name="delete">Supprimer</button>
-                    </form>
+                    <td><?php echo $row->idArticle; ?></td>
+                    <td><?php echo $row->titre; ?></td>
+                    <td><?php echo $row->categorie; ?></td>
+                    <td class="spaceBtton">
+                        <div>
+                            <form action="http://<?= $b ?>/index.php?page=adminModifArticle&id=<?= $row->idArticle ?>" method="post">
+
+                                <button name="edit">Modifier</button>
+                                <input hidden value="<?= $row->idArticle ?>" type="text" name="idDelete">
+
+                                <button class="delete" name="delete">Supprimer</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             <?php } ?>
