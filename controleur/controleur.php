@@ -87,3 +87,29 @@ function adminModifUser()
         accueil();
     }
 }
+
+function adminCommentaire()
+{
+    if ($_SESSION['userType'] == "admin") {
+        require_once './admin/adminCommentaire.php';
+    } else {
+        accueil();
+    }
+}
+
+function adminValidate()
+{
+    if ($_SESSION['userType'] == "admin") {
+        require_once './function/adminValidate.php';
+    } else {
+        accueil();
+    }
+}
+function adminInscription()
+{
+    if ($_SESSION['userType'] == "admin") {
+        require_once './admin/adminInscription.php';
+    } else {
+        accueil();
+    }
+}

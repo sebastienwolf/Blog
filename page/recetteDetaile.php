@@ -41,6 +41,8 @@ $recette = $_SESSION['idRecette'];
                 </svg>
                 <?= $row->counter ?> commentaires
             </a>
+        </div>
+        <section class="AllComment">
             <div>
                 <?php
                 $popCom = popCom($pdo, ['sqlCom' =>  $a]);
@@ -58,8 +60,10 @@ $recette = $_SESSION['idRecette'];
                 <?php }
                 ?>
             </div>
-        </div>
     </div>
+
+    </section>
+
     <?php if (isset($_SESSION['id'])) { ?>
         <section class="recetteCom">
             <h4>Laisser un commentaire</h4>

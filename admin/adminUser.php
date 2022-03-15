@@ -7,6 +7,7 @@ include_once './function/requete.php';
     <h2>Administration</h2>
     <div>
         <a href="http://<?= $b ?>/index.php?page=tableauDeBord"><button>Retour</button></a>
+        <a href="http://<?= $b ?>/index.php?page=adminInscription"><button>Inscription</button></a>
 
     </div>
     <section>

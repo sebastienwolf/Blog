@@ -389,18 +389,20 @@ main {
 
                 }
 
-                .affichageCom {
-                    display: block;
-                    border: 1px solid $color4;
-                    margin-bottom: 5px;
 
-                    p {
-                        color: $color2;
+            }
+
+            .affichageCom {
+                display: block;
+                border: 1px solid $color4;
+                margin-bottom: 5px;
+
+                p {
+                    color: $color4;
 
 
-                        .coment {
-                            color: $color4;
-                        }
+                    .coment {
+                        color: $color4;
                     }
                 }
             }

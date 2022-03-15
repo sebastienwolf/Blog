@@ -10,6 +10,7 @@ include_once './function/requete.php';
         <a href="http://<?= $b ?>/index.php?page=adminAddArticle"><button>Ajouter un article</button></a>
         <a href="http://<?= $b ?>/index.php?page=adminMessage"><button> Contact</button></a>
         <a href="http://<?= $b ?>/index.php?page=adminUser"><button>Modifier un utilisateur</button></a>
+        <a href="http://<?= $b ?>/index.php?page=adminCommentaire"><button>Commentaire article</button></a>
 
     </div>
     <section>

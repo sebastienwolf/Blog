@@ -11,8 +11,7 @@ include_once './common/header.php';
         <a href="http://<?= $b ?>/index.php?page=tableauDeBord"><button>Retour</button></a>
 
     </div>
-
-    <form action="./function/modifUser.php" method="POST">
+    <form action="./function/inscription.php" method="POST">
         <div>
             <!-- <label for=""><b>Nom :</b></label> -->
             <input type="text" name="nom" placeholder="Nom">
@@ -24,15 +23,8 @@ include_once './common/header.php';
             <input type="password" name="password" placeholder="Password">
             <!-- <label for=""><b>Pseudo :</b></label> -->
             <input type="text" name="userPseudo" placeholder="Pseudo">
-            <select name="type" id="type">
-                <option value="1">utilsateur</option>
-                <option value="2">admin</option>
-
-            </select>
-
-            <input hidden value="<?= filter_input(INPUT_GET, "id") ?>" type="text" name="id">
         </div>
-        <button class="creer" name="creer">Modifier</button>
+        <button class="creer" name="creer">Créer</button>
 
     </form>
 

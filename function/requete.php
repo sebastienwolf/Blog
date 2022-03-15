@@ -58,3 +58,13 @@ function reception($pdo)
     $stmt->execute();
     return $stmt;
 }
+
+function allComment($pdo)
+{
+    $stmt = $pdo->prepare("SELECT idCommentaire, commentaire, commentaire.pseudo, status, dateSend,
+     users.nom, users.prenom, article.titre  FROM commentaire 
+     LEFT JOIN article ON commentaire.idArticle = article.idArticle 
+     RIGHT JOIN users ON commentaire.idUsers = users.idUsers  WHERE idCommentaire > 0 && status = false");
+    $stmt->execute();
+    return $stmt;
+}

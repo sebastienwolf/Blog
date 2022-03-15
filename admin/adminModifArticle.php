@@ -7,6 +7,11 @@ include_once './function/requete.php';
     <h2>
         Modification
     </h2>
+    <div>
+        <a href="http://<?= $b ?>/index.php?page=tableauDeBord"><button>Retour</button></a>
+
+    </div>
+
     <form action="../function/modifArticle.php" method="POST">
         <div>
             <input type="text" name="titre" placeholder="Titre">

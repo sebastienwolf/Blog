@@ -402,17 +402,17 @@ main .cardsDetaille .cards .commentaire a {
   color: #2F2E2E;
 }
 
-main .cardsDetaille .cards .commentaire .affichageCom {
+main .cardsDetaille .cards .affichageCom {
   display: block;
   border: 1px solid #2F2E2E;
   margin-bottom: 5px;
 }
 
-main .cardsDetaille .cards .commentaire .affichageCom p {
-  color: #84947B;
+main .cardsDetaille .cards .affichageCom p {
+  color: #2F2E2E;
 }
 
-main .cardsDetaille .cards .commentaire .affichageCom p .coment {
+main .cardsDetaille .cards .affichageCom p .coment {
   color: #2F2E2E;
 }
 

@@ -47,6 +47,17 @@ if ($filter) {
         case "adminModifUser":
             adminModifUser();
             break;
+        case "adminCommentaire":
+            adminCommentaire();
+            break;
+
+        case "adminValidate":
+            adminValidate();
+            break;
+
+        case "adminInscription":
+            adminInscription();
+            break;
     }
 } else {
     accueil();
