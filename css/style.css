@@ -281,8 +281,10 @@ main .index section .text {
 }
 
 main .index section .text p {
-  white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   color: #2F2E2E;
 }
@@ -366,8 +368,10 @@ main .cardsDetaille .cards .text {
 }
 
 main .cardsDetaille .cards .text p {
-  white-space: nowrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   color: #2F2E2E;
 }

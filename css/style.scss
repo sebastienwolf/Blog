@@ -277,8 +277,11 @@ main {
 
 
                 p {
-                    white-space: nowrap;
+                    //white-space: nowrap;
                     overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
                     text-overflow: ellipsis;
                     color: $color4;
                 }
@@ -356,8 +359,10 @@ main {
 
 
                 p {
-                    white-space: nowrap;
                     overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
                     text-overflow: ellipsis;
                     color: $color4;
                 }

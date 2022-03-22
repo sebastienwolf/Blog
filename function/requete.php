@@ -3,11 +3,12 @@ function popArticle($pdo, $where)
 {
     // $i = filter_input(INPUT_GET, "id");
     // include './common/connexion.php';
-    $stmt = $pdo->prepare("SELECT article.*, users.*, categorie.*, COUNT(commentaire.idArticle) as counter 
+    $stmt = $pdo->prepare("SELECT article.*,DATE_FORMAT(dateCreate, '%d/%m/%Y') as dateE, users.*, categorie.*, t1.counter, IFNULL(t1.counter,0) AS counterEnd 
     FROM article LEFT JOIN commentaire ON commentaire.idArticle = article.idArticle LEFT JOIN users 
     ON article.idUsers = users.idUsers LEFT JOIN categorie ON article.idCategorie = categorie.idCategorie
-    WHERE {$where['sql']}
-    GROUP BY article.idArticle");
+    LEFT JOIN (SELECT commentaire.idArticle, COUNT(commentaire.idArticle)as counter FROM commentaire 
+    WHERE commentaire.status = true GROUP BY commentaire.idArticle) as t1 ON t1.idArticle = article.idArticle 
+    WHERE {$where['sql']} GROUP BY article.idArticle");
 
     $stmt->execute(array($where['id']));
 
@@ -33,7 +34,7 @@ function addCommentArticle($pdo, $insert)
 
 function popCom($pdo, $idarticle)
 {
-    $stmt = $pdo->prepare("SELECT * FROM commentaire WHERE idArticle = {$idarticle['sqlCom']} AND status = true");
+    $stmt = $pdo->prepare("SELECT *, DATE_FORMAT(dateSend, '%d/%m/%Y') as dateE FROM commentaire WHERE idArticle = {$idarticle['sqlCom']} AND status = true");
     $stmt->execute();
     return $stmt;
 }
