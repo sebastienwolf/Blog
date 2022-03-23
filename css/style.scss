@@ -502,7 +502,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 1000px;
 
         div {
             width: 100%;
@@ -538,7 +538,19 @@ main {
 
                 td {
                     border: 1px solid $color7;
+                    word-break: break-all;
                 }
+
+                #taille {
+                    width: 300px;
+                }
+
+                #purge {
+                    word-break: normal;
+
+                }
+
+
 
                 .spaceBtton {
                     display: flex;

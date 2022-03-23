@@ -1,3 +1,4 @@
+
 <?php
 include_once './common/connexion.php';
 include_once './common/header.php';
@@ -11,10 +12,13 @@ if (isset($_POST['validate'])) {
     $test->execute();
 }
 
-if (isset($_POST['delete'])) {
+if (filter_input(INPUT_GET, "id")) {
     $id = filter_input(INPUT_GET, "id");
+    // $id = $_POST['id'];
     $stmtdelete = "DELETE FROM commentaire WHERE idCommentaire= $id";
     $pdo->query($stmtdelete);
+
+    echo ("1");
 }
 
-header("Location: http://$b/index.php?page=adminCommentaire");
+//header("Location: http://$b/index.php?page=adminCommentaire");

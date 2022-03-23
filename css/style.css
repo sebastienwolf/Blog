@@ -525,7 +525,7 @@ main .admintableau {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 1000px;
 }
 
 main .admintableau div {
@@ -563,6 +563,15 @@ main .admintableau section table thead {
 
 main .admintableau section table td {
   border: 1px solid #8b8585;
+  word-break: break-all;
+}
+
+main .admintableau section table #taille {
+  width: 300px;
+}
+
+main .admintableau section table #purge {
+  word-break: normal;
 }
 
 main .admintableau section table .spaceBtton {

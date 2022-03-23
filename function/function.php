@@ -23,9 +23,14 @@ function sendMessage()
         (DEFAULT, '$mail', '$message')";
 
     $pdo->query($requete);
-    $_SESSION['erreur'] = 1;
+    return $pdo;
 
-    header('Location: ../index.php?page=contact');
+
+
+
+    // $_SESSION['erreur'] = 1;
+
+    // header('Location: ../index.php?page=contact');
 }
 // ==================================================================================
 // inscription user

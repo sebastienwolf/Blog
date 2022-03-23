@@ -7,8 +7,8 @@ include './common/connexion.php';
 if (isset($_POST['sendMessage'])) {
     if (htmlspecialchars(filter_input(INPUT_POST, 'message')) &&  filter_input(INPUT_POST, 'mail')) {
         sendMessage();
+        echo json_encode("1");
     } else {
-        $_SESSION['erreur'] = 2;
-        header('Location: ../index.php?page=contact');
+        echo json_encode("3");
     }
 }

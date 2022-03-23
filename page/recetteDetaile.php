@@ -70,27 +70,76 @@ $recette = $_SESSION['idRecette'];
     <?php if (isset($_SESSION['id'])) { ?>
         <section class="recetteCom">
             <h4>Laisser un commentaire</h4>
-            <form action="./function/addCommentArticle.php" method="POST">
-                <input type="text" name="pseudo" id="" placeholder="Pseudo">
+            <form id="form" action="/function/addCommentArticle.php" method="POST">
+                <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
                 <textarea id="story" name="story" rows="5" cols="33" placeholder="Commentaire"></textarea>
                 <input value="<?= $filter = filter_input(INPUT_GET, "id") ?>" type="text" name="id" hidden>
-                <button name="addComment">envoyer</button>
+                <input type="submit" name="addComment">
             </form>
+            <!-- debut fetch depot commentaire -->
+            <script>
+                let URL = "./function/addCommentArticle.php"
+                // on fait un eventlistener pour stop le submit
+                document.getElementById("form").addEventListener('submit', event => {
+                    event.preventDefault();
+                    // on pren le form en variable
+                    let form = document.getElementById("form")
+                    // on crée l'objet formData
+                    let formData = new FormData(form)
+                    formData.append('addComment', "retour")
+
+                    // on envoie en fetch le tour est jouée
+                    fetch(URL, {
+                            body: formData,
+                            method: "post"
+                        })
+                        // on veux une réponse de php on fait la deuxieme promesse
+                        .then(function(response) {
+                            return response.json()
+                        })
+                        //la toisieme promesse pour la reponse de php
+                        .then(function(data) {
+                            console.log(data);
+
+                            if (data) {
+                                $err = data;
+                                if ($err == 2) {
+                                    document.getElementById('err').innerHTML = "<p style='color:red'>erreur veuillez réesser</p>";
+                                }
+                                if ($err == 1) {
+                                    document.getElementById('pseudo').value = ""
+                                    document.getElementById('story').value = ""
+
+                                    document.getElementById('err').innerHTML = "<p style='color:green'>message envoyé</p>";
+                                }
+                                if ($err == 3) {
+                                    document.getElementById('err').innerHTML = "<p style='color:red'>Il manque une donnée</p>";
+                                }
+                            }
+
+                        })
+
+
+                })
+            </script>
+            <!-- fin du script -->
+
             <?php
-            if (isset($_SESSION['erreur'])) {
-                $err = $_SESSION['erreur'];
-                unset($_SESSION['erreur']);
-                if ($err == 2) {
-                    echo "<p style='color:red'>erreur veuillez réesser</p>";
-                }
-                if ($err == 1) {
-                    echo "<p style='color:green'>message envoyé</p>";
-                }
-                if ($err == 3) {
-                    echo "<p style='color:red'>Il manque une donnée</p>";
-                }
-            }
+            // if (isset($_SESSION['erreur'])) {
+            //     $err = $_SESSION['erreur'];
+            //     unset($_SESSION['erreur']);
+            //     if ($err == 2) {
+            //         echo "<p style='color:red'>erreur veuillez réesser</p>";
+            //     }
+            //     if ($err == 1) {
+            //         echo "<p style='color:green'>message envoyé</p>";
+            //     }
+            //     if ($err == 3) {
+            //         echo "<p style='color:red'>Il manque une donnée</p>";
+            //     }
+            // }
             ?>
+            <h3 id="err"></h3>
         </section>
     <?php } ?>
     <section class="recetteNew">
